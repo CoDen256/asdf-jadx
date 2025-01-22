@@ -18,4 +18,6 @@ download_release "$ASDF_INSTALL_VERSION" "$release_file"
 unzip "$release_file" -d "$ASDF_DOWNLOAD_PATH" || fail "Could not extract $release_file"
 
 # Remove the tar.gz file since we don't need to keep it
+ln -s "$ASDF_DOWNLOAD_PATH/bin/jadx" "$ASDF_DOWNLOAD_PATH/jadx"
+ln -s "$ASDF_DOWNLOAD_PATH/bin/jadx-gui" "$ASDF_DOWNLOAD_PATH/jadx-gui"
 rm "$release_file"
